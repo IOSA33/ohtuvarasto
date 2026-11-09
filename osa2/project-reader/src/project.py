@@ -7,7 +7,7 @@ class Project:
         self.dependencies = dependencies
         self.dev_dependencies = dev_dependencies
 
-    def _stringify_list(self, items):
+    def m_stringify_list(self, items):
         if len(items) == 0:
             return "\n-"
 
@@ -21,5 +21,5 @@ class Project:
             f"\n\nAuthors:{self._stringify_list(self.authors)}"
             f"\n\nDependencies:{self._stringify_list(self.dependencies)}"
             "\n\nDevelopment dependencies:"
-            f"{self._stringify_list(self.dev_dependencies)}"
+            f"{self.m_stringify_list(self.dev_dependencies)}"
         )
